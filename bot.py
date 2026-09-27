@@ -19,7 +19,7 @@ def gen_markup(prize_id):
 
 def gen_shop_markup(lost_prizes):
     markup = InlineKeyboardMarkup()
-    for prize_id, img_name in lost_prizes[:5]: # Показываем максимум 5 последних упущенных
+    for prize_id, img_name in lost_prizes[:5]: # Показываем максимум 5 последних упущеных
         markup.add(InlineKeyboardButton(f"Купить картинку #{prize_id} за {BONUS_COST} 🪙", callback_data=f"buy_{prize_id}"))
     return markup
 
